@@ -1,0 +1,44 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="header :: copy"></head>
+
+<body>
+
+	<h1>Spring Boot Microservices Example</h1>
+	<h3>Order Service</h3>
+	<form action="/order">
+	  	Customer Name:<br>
+	  	<input type="string" name="customerName" value="0">
+	  	<br>
+	  	Order Date<br>
+	  	<input type="date" name="orderDate" value="0">
+	  	<br>
+	  	Shipping Address:<br>
+	  	<input type="string" name="shippingAddress" value="0">
+	  	<br>
+	  	Order Items:<br>
+	  	<input type="string" name="orderItems" value="0">
+	  	<br>
+	  	<br>
+	  	<input type="submit" value="Submit">
+	</form>	
+	<hr>
+	<form action="/orderItem">
+	  	Product Code:<br>
+	  	<input type="number" name="productCode" value="0">
+	  	<br>
+	  	Product Name:<br>
+	  	<input type="string" name="productName" value="0">
+	  	<br>
+	  	Quantity:<br>
+	  	<input type="number" name="quantity" value="0">
+	  	<br><br>
+	  	<input type="submit" value="Submit">
+	</form>	
+
+	<div th:replace="footer :: copy"></div>
+
+</body>
+</html>
